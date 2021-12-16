@@ -9,7 +9,10 @@ public class BinarySearchIMPL {
 
 
     @Autowired
-   private SortAlgorithm sortAlgorithm;
+    private SortAlgorithm sortAlgorithm;
+//   private SortAlgorithm bubbleSort; // name of the variable
+
+    // @Primary has the higher priority over name of the variable
 
 //    public BinarySearchIMPL(SortAlgorithm sortAlgorithm) {
 //        this.sortAlgorithm = sortAlgorithm;
