@@ -16,9 +16,17 @@ public class BinarySearchIMPL {
 //    }
 
 
-    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
+    // Setter autowiring  and no setter auto wiring is quiet same
+
+    /*
+    Recommendations:
+        Mandatory dependencies use Constructor injection
+        All other use setter injection (optional dependencies)
+     */
+
+//    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+//        this.sortAlgorithm = sortAlgorithm;
+//    }
 
     public int binarySearch(int[] numbers, int numberToSearch) {
 
