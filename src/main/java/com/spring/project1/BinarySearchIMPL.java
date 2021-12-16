@@ -2,6 +2,7 @@ package com.spring.project1;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,7 +10,10 @@ public class BinarySearchIMPL {
 
 
     @Autowired
-    private SortAlgorithm sortAlgorithm;
+    @Qualifier("Quick") // @Qualifier
+    private SortAlgorithm sortAlgorithm; // both line number 13 and 14
+
+//    private SortAlgorithm sortAlgorithm; // @Primary
 //   private SortAlgorithm bubbleSort; // name of the variable
 
     // @Primary has the higher priority over name of the variable
