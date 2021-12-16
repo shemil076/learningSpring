@@ -18,7 +18,16 @@ public class Project1Application {
 
 		// Application context
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(Project1Application.class, args);
+
+
 		BinarySearchIMPL binarySearch = applicationContext.getBean(BinarySearchIMPL.class);
+
+		BinarySearchIMPL binarySearch1 = applicationContext.getBean(BinarySearchIMPL.class);
+
+		System.out.println(binarySearch);
+		System.out.println("");
+		System.out.println(binarySearch1);
+
 		int result = binarySearch.binarySearch(new int[]{12, 4, 6},3);
 
 		System.out.println(result);
