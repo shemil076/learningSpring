@@ -1,6 +1,5 @@
-package com.spring.project1;
+package com.spring.project1.basic;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component

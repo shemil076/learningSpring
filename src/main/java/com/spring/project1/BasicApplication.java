@@ -1,12 +1,12 @@
 package com.spring.project1;
 
-import org.springframework.beans.factory.annotation.Configurable;
+import com.spring.project1.basic.BinarySearchIMPL;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class Project1Application {
+public class BasicApplication {
 
 	public static void main(String[] args) {
 // We should say to  the spring fra,e work:-
@@ -17,7 +17,7 @@ public class Project1Application {
 //		BinarySearchIMPL binarySearchIMPL = new BinarySearchIMPL(new QuickSort());
 
 		// Application context
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(Project1Application.class, args);
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicApplication.class, args);
 
 
 		BinarySearchIMPL binarySearch = applicationContext.getBean(BinarySearchIMPL.class);
