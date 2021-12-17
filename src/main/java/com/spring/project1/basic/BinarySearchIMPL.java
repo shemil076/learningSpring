@@ -1,11 +1,16 @@
 package com.spring.project1.basic;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 //@Scope("prototype") // Not a good practise so =>
@@ -13,8 +18,10 @@ import org.springframework.stereotype.Component;
 public class BinarySearchIMPL {
 
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
-    @Qualifier("Quick") // @Qualifier
+    @Qualifier("Bubble") // @Qualifier
     private SortAlgorithm sortAlgorithm; // both line number 13 and 14
 
 //    private SortAlgorithm sortAlgorithm; // @Primary
@@ -51,6 +58,16 @@ public class BinarySearchIMPL {
         // search the array
 
         return 3;
+    }
+
+    @PostConstruct //only once, just after the initialization of bean properties.
+    public void postConstruct() {
+        logger.info("Post Construct");
+    }
+
+    @PreDestroy //runs only once, just before Spring removes(destroy) our bean from the application context.
+    public void preDestroy() {
+        logger.info("Pre Destroy");
     }
 }
   
