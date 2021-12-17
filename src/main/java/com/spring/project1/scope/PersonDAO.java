@@ -1,9 +1,9 @@
 package com.spring.project1.scope;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class PersonDAO {
 
