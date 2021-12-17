@@ -1,11 +1,13 @@
 package com.spring.project1;
 
 import com.spring.project1.basic.BinarySearchIMPL;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class BasicApplication {
 
 	public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class BasicApplication {
 //		BinarySearchIMPL binarySearchIMPL = new BinarySearchIMPL(new QuickSort());
 
 		// Application context
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicApplication.class, args);
+		ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasicApplication.class);
 
 
 		BinarySearchIMPL binarySearch = applicationContext.getBean(BinarySearchIMPL.class);
