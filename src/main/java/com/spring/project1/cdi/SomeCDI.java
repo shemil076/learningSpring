@@ -17,4 +17,15 @@ public class SomeCDI {
         this.someCDIDAO = someCDIDAO;
     }
 
+
+    public int findGreat(){
+        int greatest = Integer.MIN_VALUE;
+        int [] data = someCDIDAO.getData();
+        for (int value : data) {
+            if (value > greatest){
+                greatest = value;
+            }
+        }
+        return greatest;
+    }
 }
